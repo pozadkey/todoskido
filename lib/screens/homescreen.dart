@@ -4,7 +4,6 @@ import 'package:hive/hive.dart';
 import 'package:todoskido/components/todo_tile.dart';
 import 'package:todoskido/data/db.dart';
 import 'package:todoskido/themes/light_theme.dart';
-
 import '../components/dialog_box.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -24,7 +23,6 @@ class _HomeScreenState extends State<HomeScreen> {
       // Load if there's existing  data
       db.loadData();
     }
-
     super.initState();
   }
 
