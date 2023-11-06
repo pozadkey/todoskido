@@ -21,53 +21,48 @@ class ToDoTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
-        left: 20,
-        right: 20,
+        left: 10,
+        right: 10,
         top: 20,
       ),
       child: Slidable(
-        endActionPane: ActionPane(
-          motion: const StretchMotion(),
-          children: [
-            SlidableAction(
-              onPressed: deleteFunction,
-              icon: Icons.delete,
-              backgroundColor: Colors.red.shade300,
-              borderRadius: BorderRadius.circular(3),
-            )
-          ],
-        ),
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-          decoration: BoxDecoration(
-            color: ListTileColor.bgColor,
-            borderRadius: BorderRadius.circular(3),
-          ),
-          child: Row(
+          endActionPane: ActionPane(
+            motion: const StretchMotion(),
             children: [
-              // Checkbox
-              Checkbox(
-                  value: taskCompleted,
-                  onChanged: onChanged,
-                  activeColor: ListTileColor.checkBoxColor),
-
-              // Task name
-              Text(
-                taskName,
-                style: TextStyle(
-                  fontFamily: 'ClashDisplay',
-                  fontWeight:
-                      Theme.of(context).textTheme.displaySmall!.fontWeight,
-                  fontSize: Theme.of(context).textTheme.displaySmall!.fontSize,
-                  decoration: taskCompleted
-                      ? TextDecoration.lineThrough
-                      : TextDecoration.none,
-                ),
-              ),
+              SlidableAction(
+                onPressed: deleteFunction,
+                icon: Icons.delete,
+                backgroundColor: Colors.red.shade300,
+                borderRadius: BorderRadius.circular(3),
+              )
             ],
           ),
-        ),
-      ),
+          child: ListTile(
+            contentPadding:
+                const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+            tileColor: ListTileColor.bgColor,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(3),
+            ),
+            leading: Checkbox(
+              value: taskCompleted,
+              onChanged: onChanged,
+              activeColor: ListTileColor.checkBoxColor,
+            ),
+            title: Text(
+              taskName,
+              style: TextStyle(
+                color: Theme.of(context).textTheme.displaySmall!.color,
+                fontFamily: 'ClashDisplay',
+                fontWeight:
+                    Theme.of(context).textTheme.displaySmall!.fontWeight,
+                fontSize: Theme.of(context).textTheme.displaySmall!.fontSize,
+                decoration: taskCompleted
+                    ? TextDecoration.lineThrough
+                    : TextDecoration.none,
+              ),
+            ),
+          )),
     );
   }
 }

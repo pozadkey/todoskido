@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 
 import '../themes/light_theme.dart';
 
-
 class PrimaryButton extends StatefulWidget {
   final String text;
   final Function onPressed;
+  final Color? bgColor;
 
-  const PrimaryButton({Key? key, required this.text, required this.onPressed})
+  const PrimaryButton({Key? key, required this.text, required this.onPressed, this.bgColor})
       : super(key: key);
 
   @override
@@ -19,8 +19,6 @@ class PrimaryButton extends StatefulWidget {
 class _PrimaryButtonState extends State<PrimaryButton> {
   @override
   Widget build(BuildContext context) {
-
-
     final buttonFont = TextStyle(
         fontSize: 16,
         color: PrimaryButtonColors.textColor,
@@ -30,9 +28,7 @@ class _PrimaryButtonState extends State<PrimaryButton> {
 
     return TextButton(
       child: Padding(
-        padding:  
-            EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-           
+        padding: EdgeInsets.symmetric(horizontal: 8, vertical: 6),
         child: Text(
           widget.text,
           style: buttonFont,
@@ -43,7 +39,7 @@ class _PrimaryButtonState extends State<PrimaryButton> {
         widget.onPressed();
       },
       style: TextButton.styleFrom(
-        backgroundColor: PrimaryButtonColors.bgColor,
+        backgroundColor: widget.bgColor ?? PrimaryButtonColors.bgColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(
             1.0,

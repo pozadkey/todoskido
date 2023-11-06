@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 class MyListTile extends StatelessWidget {
   final Function()? onTap;
   final IconData icon;
+  final Icon? trailing;
   final String text;
-  final IconData? trailingIcon;
+  final IconButton? trailingIcon;
   final Color? iconColor;
   const MyListTile(
       {super.key,
@@ -12,7 +13,8 @@ class MyListTile extends StatelessWidget {
       required this.text,
       this.onTap,
       this.trailingIcon,
-      this.iconColor});
+      this.iconColor,
+      this.trailing});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,6 @@ class MyListTile extends StatelessWidget {
       color: Theme.of(context).textTheme.displaySmall!.color,
     );
     return ListTile(
-      onTap: onTap,
       leading: Icon(
         icon,
         color: iconColor ?? Theme.of(context).textTheme.displayLarge!.color,
@@ -32,10 +33,11 @@ class MyListTile extends StatelessWidget {
         text,
         style: textTextStyle,
       ),
-      trailing: Icon(
-        trailingIcon,
+      trailing: IconButton(
+        icon: trailing!,
         color: iconColor ?? Theme.of(context).textTheme.displayLarge!.color,
-        size: 15,
+        iconSize: 20,
+        onPressed: onTap,
       ),
     );
   }

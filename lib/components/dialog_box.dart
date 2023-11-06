@@ -56,9 +56,13 @@ class DialogBox extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     // save button
-                    PrimaryButton(text: 'Save', onPressed: onSave),
+                    PrimaryButton(
+                      text: 'Save',
+                      onPressed: onSave,
+                      bgColor: const Color.fromARGB(255, 33, 129, 208),
+                    ),
 
-                    const SizedBox(width: 8),
+                    const SizedBox(width: 12),
 
                     // cancel button
                     PrimaryButton(text: 'Cancel', onPressed: onCancel),

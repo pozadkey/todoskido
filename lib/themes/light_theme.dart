@@ -33,22 +33,6 @@ ThemeData lightTheme = ThemeData(
         fontFamily: 'ClashDisplay',
         fontWeight: FontWeight.w600,
         letterSpacing: 0.2),
-// Header text style mobile
-    headlineMedium: const TextStyle(
-        fontSize: 58,
-        color: Color.fromRGBO(255, 255, 255, 1),
-        fontFamily: 'ClashDisplay',
-        fontWeight: FontWeight.w500,
-        letterSpacing: 0.2),
-
-    // Medium text style
-    displayMedium: const TextStyle(
-        fontSize: 20,
-        color: Color.fromARGB(255, 239, 239, 239),
-        fontFamily: 'SpaceGrotesk',
-        fontWeight: FontWeight.w400,
-        height: 1.5,
-        letterSpacing: 0.2),
 
     // default text style
     displaySmall: TextStyle(
@@ -57,21 +41,6 @@ ThemeData lightTheme = ThemeData(
         fontFamily: 'ClashDisplay',
         fontWeight: FontWeight.w400,
         height: 1.5,
-        letterSpacing: 0.2),
-
-    titleSmall: const TextStyle(
-        fontSize: 14,
-        color: Colors.white,
-        fontFamily: 'SpaceGrotesk',
-        fontWeight: FontWeight.w400,
-        height: 1.5,
-        letterSpacing: 0.2),
-
-    titleMedium: const TextStyle(
-        fontSize: 32,
-        color: Color.fromRGBO(255, 255, 255, 1),
-        fontFamily: 'ClashDisplay',
-        fontWeight: FontWeight.w500,
         letterSpacing: 0.2),
   ),
 );
@@ -93,7 +62,7 @@ class TextFieldColor {
   static Color filledColor =
       const Color.fromARGB(255, 255, 255, 255); // Filled Color
   static Color hintTextColor = Colors.grey[400]!; // hint Color
-   static Color inputTextColor = Colors.grey[800]!; // hint Color
+  static Color inputTextColor = Colors.grey[800]!; // hint Color
 }
 
 // Primary Button Colors
