@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../components/list_tile.dart';
 import '../providers/theme_provider.dart';
@@ -18,14 +17,6 @@ class SettingsScreen extends ConsumerWidget {
       color: Theme.of(context).textTheme.displayLarge!.color,
     );
 
-    openUrl(pageUrl) async {
-      final url = Uri.parse(pageUrl);
-      if (await canLaunchUrl(url)) {
-        await launchUrl(url);
-      } else {
-        throw 'Could not launch $url';
-      }
-    }
 
     return CupertinoPageScaffold(
       backgroundColor:
@@ -61,19 +52,6 @@ class SettingsScreen extends ConsumerWidget {
                   ),
                   const SizedBox(height: 5),
                   Divider(color: Colors.grey[400]),
-                  const SizedBox(height: 5),
-                  MyListTile(
-                    icon: Icons.shield,
-                    text: 'Privacy Policy',
-                    trailing: Icon(
-                      Icons.arrow_forward_ios,
-                      color: Theme.of(context).textTheme.displayLarge!.color,
-                    ),
-                    onTap: () {
-                      openUrl(
-                          'https://www.freeprivacypolicy.com/live/a9a021cb-c6bb-4326-b0e4-849d8c2f65a0');
-                    },
-                  ),
                 ],
               ),
             ),

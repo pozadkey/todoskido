@@ -32,11 +32,11 @@ class DialogBox extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Row(
+                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     // save button
-                    Text('New Task')
+                    Text('New Task', style: Theme.of(context).textTheme.titleMedium,)
                   ],
                 ),
                 const SizedBox(

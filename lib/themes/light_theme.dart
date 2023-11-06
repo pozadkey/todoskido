@@ -34,6 +34,12 @@ ThemeData lightTheme = ThemeData(
         fontWeight: FontWeight.w600,
         letterSpacing: 0.2),
 
+    titleMedium: const TextStyle(
+        fontSize: 24,
+        color: Colors.white,
+        fontFamily: 'ClashDisplay',
+        fontWeight: FontWeight.w500,
+        letterSpacing: 0.2),
     // default text style
     displaySmall: TextStyle(
         fontSize: 16,

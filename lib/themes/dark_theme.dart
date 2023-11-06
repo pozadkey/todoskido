@@ -35,6 +35,8 @@ ThemeData darkTheme = ThemeData(
         fontWeight: FontWeight.w500,
         letterSpacing: 0.2),
 
+   
+
     // default text style
     displaySmall: TextStyle(
         fontSize: 16,
@@ -43,12 +45,19 @@ ThemeData darkTheme = ThemeData(
         fontWeight: FontWeight.w400,
         height: 1.5,
         letterSpacing: 0.2),
+
+    titleMedium: TextStyle(
+        fontSize: 24,
+        color: Color.fromRGBO(255, 255, 255, 1),
+        fontFamily: 'ClashDisplay',
+        fontWeight: FontWeight.w500,
+        letterSpacing: 0.2),
   ),
 );
 
 // ListTile Colors
 class ListTileColor {
-  static Color bgColor = Colors.black; // Background Color
+  static Color bgColor = Colors.black;  // Background Color
   static Color checkBoxColor = Colors.white; // CheckBox Color
 }
 
@@ -63,7 +72,7 @@ class TextFieldColor {
   static Color filledColor =
       const Color.fromARGB(255, 255, 255, 255); // Filled Color
   static Color hintTextColor = Colors.grey[400]!; // hint Color
-  static Color inputTextColor = Colors.grey[800]!; // hint Color
+   static Color inputTextColor = Colors.grey[800]!; // hint Color
 }
 
 // Primary Button Colors
