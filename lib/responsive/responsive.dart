@@ -13,17 +13,14 @@ class Responsive extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Theme.of(context).cupertinoOverrideTheme?.barBackgroundColor,
-      child: Center(
-        // Constraint widgets to maximum width
-        child: ConstrainedBox(
-          constraints: constraints ??
-              const BoxConstraints(
-                maxWidth: 600,
-              ),
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: child,
-          ),
+      child: ConstrainedBox(
+        constraints: constraints ??
+            const BoxConstraints(
+              maxWidth: 600,
+            ),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: child,
         ),
       ),
     );

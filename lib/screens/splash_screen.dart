@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todoskido/components/navigation/bottom_nav.dart';
+import 'package:todoskido/responsive/screen_type.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(seconds: 2), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => const BottomNav(), // Navigate to home screen
+          builder: (context) => const ScreenType(), // Navigate to home screen
         ),
       );
     });
