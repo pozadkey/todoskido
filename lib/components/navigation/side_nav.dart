@@ -51,13 +51,15 @@ class SideNav extends ConsumerWidget {
               ),
             ),
             VerticalDivider(
-              color: Colors.grey[300],
+              width: 1,
+              color: Colors.grey[200],
             ),
             Expanded(
                 child: Responsive(
                     child: _tabPages(ref.watch(sideNavIndexProvider)))),
             VerticalDivider(
-              color: Colors.grey[300],
+              width: 1,
+              color: Colors.grey[200],
             ),
             Expanded(
               child: Container(

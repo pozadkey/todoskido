@@ -75,11 +75,13 @@ class _HomeScreenState extends State<HomeScreen> {
     showDialog(
         context: context,
         builder: (context) {
-          return DialogBox(
-              controller: _textController,
-              maxLines: 16,
-              onSave: saveNewTask,
-              onCancel: () => Navigator.of(context).pop());
+          return SingleChildScrollView(
+            child: DialogBox(
+                controller: _textController,
+                maxLines: 16,
+                onSave: saveNewTask,
+                onCancel: () => Navigator.of(context).pop()),
+          );
         });
     _textController.clear();
   }

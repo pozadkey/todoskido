@@ -15,40 +15,39 @@ class BottomNav extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Responsive(
-      child: Scaffold(
-          backgroundColor:
-              Theme.of(context).cupertinoOverrideTheme?.barBackgroundColor,
-          body: IndexedStack(
+    return Scaffold(
+        backgroundColor:
+            Theme.of(context).cupertinoOverrideTheme?.barBackgroundColor,
+        body: Responsive(
+          child: IndexedStack(
             index: ref.watch(indexProvider),
             children: const [HomeScreen(), SettingsScreen()],
           ),
-          bottomNavigationBar: BottomNavigationBar(
-            backgroundColor:
-                Theme.of(context).cupertinoOverrideTheme?.barBackgroundColor,
-            onTap: (index) {
-              ref.read(indexProvider.notifier).state = index;
-            },
-            currentIndex: ref.watch(indexProvider),
-            type: BottomNavigationBarType.fixed,
-            selectedItemColor: Theme.of(context).textTheme.displayLarge!.color,
-            unselectedItemColor: Colors.grey[400],
-            selectedFontSize: 10,
-            unselectedFontSize: 9,
-            showUnselectedLabels: true,
-            selectedLabelStyle: navFontTextStyle,
-            unselectedLabelStyle: navFontTextStyle,
-            elevation: 0,
-            iconSize: 30,
-            items: const [
-              // Home icon
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.home_rounded), label: ''),
-              // Settings icon
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.settings_rounded), label: ''),
-            ],
-          )),
-    );
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor:
+              Theme.of(context).cupertinoOverrideTheme?.barBackgroundColor,
+          onTap: (index) {
+            ref.read(indexProvider.notifier).state = index;
+          },
+          currentIndex: ref.watch(indexProvider),
+          type: BottomNavigationBarType.fixed,
+          selectedItemColor: Theme.of(context).textTheme.displayLarge!.color,
+          unselectedItemColor: Colors.grey[400],
+          selectedFontSize: 10,
+          unselectedFontSize: 9,
+          showUnselectedLabels: true,
+          selectedLabelStyle: navFontTextStyle,
+          unselectedLabelStyle: navFontTextStyle,
+          elevation: 0,
+          iconSize: 30,
+          items: const [
+            // Home icon
+            BottomNavigationBarItem(icon: Icon(Icons.home_rounded), label: ''),
+            // Settings icon
+            BottomNavigationBarItem(
+                icon: Icon(Icons.settings_rounded), label: ''),
+          ],
+        ));
   }
 }

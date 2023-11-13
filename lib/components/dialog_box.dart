@@ -23,7 +23,7 @@ class DialogBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Responsive(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
         child: AlertDialog(
           insetPadding: EdgeInsets.zero,
           backgroundColor: AlertBoxColors.bgColor,
@@ -54,7 +54,7 @@ class DialogBox extends StatelessWidget {
                     hintText: 'Add a new task...',
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 20,
                   ),
                   // buttons -> save + cancel
                   Row(
@@ -66,9 +66,9 @@ class DialogBox extends StatelessWidget {
                         onPressed: onSave,
                         bgColor: const Color.fromARGB(255, 33, 129, 208),
                       ),
-
+    
                       const SizedBox(width: 12),
-
+    
                       // cancel button
                       PrimaryButton(text: 'Cancel', onPressed: onCancel),
                     ],
