@@ -4,7 +4,7 @@ A streamlined notes app  developed for user-friendly note-taking.
 
 # Screenshots
 
-![Screenshot](https://github.com/pozadkey/block_rush/blob/master/screenshots/todoskido.jpg)
+![Screenshot](https://github.com/pozadkey/todoskido/blob/master/screenshots/todoskido.jpg)
 
 # Features:
 
