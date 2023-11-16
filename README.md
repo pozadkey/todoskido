@@ -1,16 +1,49 @@
-# todoskido
+# Todoskido
 
-A new Flutter project.
+A streamlined notes app  developed for user-friendly note-taking.
 
-## Getting Started
+# Screenshots
 
-This project is a starting point for a Flutter application.
+![Screenshot](https://github.com/pozadkey/block_rush/blob/master/screenshots/todoskido.jpg)
 
-A few resources to get you started if this is your first Flutter project:
+# Features:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Seamless note creation: Effortlessly jot down thoughts and ideas with our user-friendly interface.
+- Theme Appearance: Toggle the app's appearance between dark and light mode.
+- Minimalist design: Enjoy distraction-free note-taking with a clean and elegant interface.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Requirements
+
+- [Flutter SDK](https://docs.flutter.dev/get-started/install)
+
+- [Android Studio](https://developer.android.com/studio)
+
+- [Xcode](https://developer.apple.com/xcode/)
+
+# Usage
+
+- Clone this repo via the link below:
+
+> [https://github.com/pozadkey/todoskido](https://github.com/pozadkey/todoskido/)
+
+
+- Open the project's root folder and excute the following command to get the dependencies
+
+```
+flutter pub get
+```
+
+# Run app on devices
+
+- Check for connected devices
+
+```
+flutter devices
+```
+- Excute to run app on devices
+```
+flutter run
+```
+
+
+
